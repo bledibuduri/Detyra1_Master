@@ -1,5 +1,5 @@
+package Platforma;
 
-// Klasa Detyra
 class Detyra {
     private String id;
     private Kursi kursi;

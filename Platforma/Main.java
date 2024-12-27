@@ -1,3 +1,4 @@
+package Platforma;
 import java.util.Scanner;
 
 public class Main {

@@ -1,3 +1,4 @@
+package Platforma;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,7 +30,7 @@ class Administrator extends Perdorues {
     }
 
     public void getPerdoruesit(Perdorues perdorues){
-        
+
     }
 
     @Override
