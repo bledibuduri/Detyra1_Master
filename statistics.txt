@@ -1,0 +1,3 @@
+Rreshtat: 2
+Fjalët: 10
+Karaktere: 100
