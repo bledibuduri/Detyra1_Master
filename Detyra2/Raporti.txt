@@ -1,0 +1,21 @@
+### Raport i Shkurtër për Kodin
+
+Objektivi: Të përpunojmë statistikat e lexuara nga një fajll hyrës dhe të krijojmë përmbajtje të strukturuar bazuar në këto statistika në një fajll dalje.
+
+Çfarë kemi realizuar:
+1. Leximi i të dhënave nga fajlli hyrës:
+   - Lexuam statistikat nga fajlli `statistics.txt` për numrin e rreshtave, fjalëve dhe karaktereve.
+   - Verifikuam formatin e rreshtave për të siguruar korrektësinë e leximit.
+
+2. Përpunimi i statistikave:
+   - Llogaritëm numrin e fjalëve për rresht dhe numrin e karaktereve për fjalë duke shmangur gabimet e ndarjes me zero.
+   - Gjeneruam një fjalë të përsëritur me gjatësi të caktuar për të ndërtuar përmbajtjen.
+
+3. Shkrimi në fajllin e daljes:
+   - Ndërtuam rreshta të përsëritur bazuar në statistikat e përpunuara dhe i ruajtëm në fajllin `output.txt`.
+   - Në rast të statistikave të pavlefshme (zero rreshta/fjalë), afishuam një mesazh gabimi.
+
+4. Trajtimi i gabimeve:
+   - Siguruam menaxhimin e gabimeve për formatin e gabuar të fajllit, probleme gjatë leximit/shkrimit të fajllit, dhe gabime në konvertimin e të dhënave numerike.
+
+Rezultati: Një program funksional që përpunon dhe gjeneron përmbajtje dinamike bazuar në statistika të dhëna, duke përdorur fajllat për ruajtjen e të dhënave dhe duke trajtuar gabimet në mënyrë efektive.

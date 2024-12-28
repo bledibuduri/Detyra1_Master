@@ -3,9 +3,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 // Klasa për instruktorët
-class Instruktori extends Perdoruesi {
+public class Instruktori extends Perdoruesi {
     private List<Kursi> kurset;
-
+   
+    public Instruktori() {
+        super("2", "Bledi Buduri", "bledi@example.com"); // Kërkohet nëse klasa bazë ka konstruktor
+        this.kurset = new ArrayList<>();
+    }
+    
     public Instruktori(String id, String emri, String email) {
         super(id, emri, email);
         this.kurset = new ArrayList<>();
@@ -17,7 +22,7 @@ class Instruktori extends Perdoruesi {
     }
 
     public void caktoDetyre(Kursi kursi, Detyra detyre) {
-        kursi.shtoDetyre(detyre);
+        //kursi.shtoDetyre(detyre);
         System.out.println("Detyra' " + detyre.getTitulli() + "' u caktua.");
     }
 }

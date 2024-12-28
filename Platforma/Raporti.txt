@@ -1,0 +1,51 @@
+### Raport i Shkurtër për Detyrën 3: Platforma Mësimi Online
+
+Objektivi: Të krijohet një platformë mësimi online e bazuar në parimet e Objektit të Orientuar të Programimit (OOP), 
+ku përdoruesit (studentë, instruktues dhe administratorë) mund të krijojnë dhe menaxhojnë kurse, të regjistrohen në 
+kurse dhe të dorëzojnë detyra. Platforma përmban edhe sisteme për diskutime dhe vlerësimin e notave.
+
+Struktura dhe Funksionalitetet:
+1. Klasa Perdoruesi:
+   - Përdor si bazë për rolet e ndryshme të përdoruesve.
+   - Përmban atribute si ID, emri dhe email, dhe ofron metodën për të parë profilin e përdoruesit.
+   - Rolet specifike: **Studenti**, **Instruktori**, dhe **Administratori** trashëgojnë nga kjo klasë.
+
+2. Klasa Studenti:
+   - Menaxhon aktivitetet e studentëve si regjistrimin në kurse dhe dorëzimin e detyrave.
+   - Përdor metodat për regjistrimin në kurse dhe dorëzimin e detyrave të caktuara.
+
+3. Klasa Instruktori:
+   - Përdoret për krijimin e kurseve dhe menaxhimin e detyrave dhe vlerësimit të tyre.
+   - Ka atribute si kurset që ligjëron dhe mund të krijojë kurse dhe të caktuar detyra për studentët.
+
+4. Klasa Administratori:
+   - Menaxhon përdoruesit dhe kurset në platformë.
+   - Mund të shtojë ose heqë përdoruesit dhe të fshijë kurset.
+
+5. Klasa Kursi:
+   - Përfaqëson çdo kurs dhe përmban atribute si ID, titulli, instruktori dhe studentët.
+   - Përmban metoda për të shtuar studentë dhe për të ngarkuar materiale.
+
+6. Klasa Detyrë:
+   - Përdoret për të përfaqësuar detyrat, duke përfshirë atribute si ID, kursi, titulli, afati i dorëzimit dhe pikët totale.
+   - Ka metoda për të shënuar detyrat si të dorëzuara nga studentët.
+
+7. Klasa RaportiNotave:
+   - Siguron gjenerimin e raporteve për notat e studentëve për secilën detyrë të dorëzuar.
+
+8. Klasa Diskutime dhe Postimi:
+   - Mundëson komunikimin nëpërmjet diskutimeve të kursit.
+   - Diskutimi përmban ID dhe postime të lidhura me kursin përkatës.
+   - Postimi ka atribute si ID, krijuesi i postimit dhe përmbajtja, dhe ofron mundësinë e modifikimit të përmbajtjes.
+
+9. Përjashtimet:
+   - **InvalidCourseException**: Hidhet kur përdoruesi tenton të regjistrohet në një kurs që nuk ekziston.
+   - **InvalidUserException**: Hidhet kur kryhen operacione në një student që nuk ekziston.
+
+10. Klasa Main:
+    - Lejon ekzekutimin e operacioneve kryesore të platformës si krijimi i përdoruesve, regjistrimi i studentëve, krijimi i kurseve, dhe vlerësimi i detyrave.
+    - Simulon një platformë mësimi online që mundëson ndërveprim dhe menaxhim të detyrave dhe kurseve përmes interaktivitetit të përdoruesve.
+
+Rezultati: Një platformë mësimi online që përfshin të gjithë procesin e menaxhimit të kurseve, regjistrimin e studentëve, 
+krijimin dhe vlerësimin e detyrave dhe mundëson diskutime për çdo kurs. Aplikimi përdor parimet e OOP për të siguruar 
+modularitet dhe menaxhim të pastër të funksionaliteteve, duke përfshirë menaxhimin e gabimeve dhe sigurinë e operacioneve në platformë.

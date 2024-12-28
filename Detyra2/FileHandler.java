@@ -1,3 +1,4 @@
+package Detyra2;
 import java.io.*;
 
 // Detyra 2: Fajllat

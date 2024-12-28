@@ -1,0 +1,25 @@
+### Raportim i Shkurtër për Detyrën
+
+Objektivi: Të krijohet një gjenerator automatizuar i kodit Java që prodhon klasë të personalizuar bazuar në inputet e përdoruesit.
+
+Çfarë kemi realizuar:
+1. Krijimi i klasës `CodeGenerator`:
+   - Implementuam metodën `generateClass` për të gjeneruar një klasë Java duke përfshirë:
+     - Variablat private.
+     - Konstruktorët (pa parametra dhe me parametra).
+     - Metodat `getter` dhe `setter` për variablat.
+     - Metodat publike të specifikuara nga përdoruesi.
+
+2. Input interaktiv:
+   - Siguruam që përdoruesi të mund të japë variabla dhe metoda përmes `Scanner`.
+   - Kontrolluam formatin e inputit dhe lejuam rishikimin e të dhënave në rast gabimi.
+
+3. Gjenerimi i kodit:
+   - Strukturuam kodin në mënyrë dinamike duke përdorur `StringBuilder`.
+   - Paraqitëm kodin e gjeneruar në ekran për përdoruesin.
+
+4. Qasja praktike:
+   - Lista të strukturuara për ruajtjen e variablave dhe metodave.
+   - Siguruam modularitet dhe ripërdorshmëri përmes ndarjes së funksionaliteteve.
+
+Rezultati: Një gjenerator dinamik që lehtëson krijimin e klasave Java duke reduktuar punën manuale dhe gabimet.
