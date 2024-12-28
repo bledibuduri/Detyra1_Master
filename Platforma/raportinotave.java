@@ -1,30 +1,18 @@
 package Platforma;
 import java.util.ArrayList;
 import java.util.List;
-// Klasa RaportiNotave
+import java.util.Map;
+import java.util.*;
+// Klasa për raportet e notave
 class RaportiNotave {
-    private Studenti studenti;
+    private Map<Studenti, Map<Detyra, Integer>> nota;
 
-    public RaportiNotave(Studenti studenti) {
-        this.studenti = studenti;
+    public RaportiNotave() {
+        this.nota = new HashMap<>();
     }
 
-    public void gjeneroRaport() {
-        System.out.println("Raporti i Notave për Studentin: " + studenti.getEmri());
-    }
-}
-
-// Klasa Diskutime
-class Diskutime {
-    private Kursi kursi;
-    private List<Postimi> postimet;
-
-    public Diskutime(Kursi kursi) {
-        this.kursi = kursi;
-        this.postimet = new ArrayList<>();
-    }
-
-    public void shtoPostim(Postimi postim) {
-        this.postimet.add(postim);
+    public void shtoVleresim(Studenti studenti, Detyra detyre, int pike) {
+        nota.computeIfAbsent(studenti, k -> new HashMap<>()).put(detyre, pike);
+        System.out.println("Vlerësimi për detyrën '" + detyre.getTitulli() + "' u shtua për studentin " + studenti.getEmri() + ".");
     }
 }

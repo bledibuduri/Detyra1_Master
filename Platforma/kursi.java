@@ -1,12 +1,14 @@
 package Platforma;
+
 import java.util.ArrayList;
 import java.util.List;
-// Klasa Kursi
+
+// Klasa për kurset
 class Kursi {
     private String id;
     private String titulli;
     private Instruktori instruktori;
-    private List<Studenti> studentët;
+    private List<Studenti> studentet;
     private List<Detyra> detyrat;
     private List<String> materialet;
 
@@ -14,26 +16,21 @@ class Kursi {
         this.id = id;
         this.titulli = titulli;
         this.instruktori = instruktori;
-        this.studentët = new ArrayList<>();
+        this.studentet = new ArrayList<>();
         this.detyrat = new ArrayList<>();
         this.materialet = new ArrayList<>();
     }
 
-    public void shtoStudent(Studenti student) {
-        this.studentët.add(student);
+    public void shtoStudent(Studenti studenti) {
+        studentet.add(studenti);
+        System.out.println("Studenti " + studenti.getEmri() + " u shtua në kursin '" + titulli + "'.");
     }
 
-    public void shtoDetyre(Detyra detyra) {
-        this.detyrat.add(detyra);
+    public void shtoDetyre(Detyra detyre) {
+        detyrat.add(detyre);
     }
 
-    public void ngarkoMaterial(String material) {
-        this.materialet.add(material);
-    }
-
-    public void shikoDetyrat() {
-        for (Detyra detyra : detyrat) {
-            System.out.println("Detyra: " + detyra.getTitulli());
-        }
+    public String getTitulli() {
+        return this.titulli;
     }
 }

@@ -1,8 +1,9 @@
 package Platforma;
 import java.util.ArrayList;
 import java.util.List;
+
 // Klasa Studenti
-class Studenti extends Perdorues {
+public class Studenti extends Perdoruesi {
     private List<Kursi> kursetRegjistruara;
     private List<Detyra> detyrat;
 
@@ -12,16 +13,22 @@ class Studenti extends Perdorues {
         this.detyrat = new ArrayList<>();
     }
 
-    public void regjistrohuNeKurs(Kursi kursi) {
-        }
+    public void regjistroKurs(Kursi kursi) {
+        kursetRegjistruara.add(kursi);
 
-    public void dorzoDetyra(Detyra detyra) {
-        detyrat.add(detyra);
+    }
+    public void setDetyrat(List<Detyra> detyrat) {
+        this.detyrat = detyrat;
     }
 
     @Override
     public void shikoProfilin() {
         System.out.println("Profili i Studentit: " + getEmri());
         System.out.println("Kurset e regjistruara: " + kursetRegjistruara.size());
+    }
+
+    public void dorzoDetyre(Detyra detyre) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'dorzoDetyre'");
     }
 }

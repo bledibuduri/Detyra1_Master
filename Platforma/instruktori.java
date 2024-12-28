@@ -1,26 +1,23 @@
 package Platforma;
 import java.util.ArrayList;
 import java.util.List;
-// Klasa Instruktori
-class Instruktori extends Perdorues {
-    private List<Kursi> kursetLigjero;
+
+// Klasa për instruktorët
+class Instruktori extends Perdoruesi {
+    private List<Kursi> kurset;
 
     public Instruktori(String id, String emri, String email) {
         super(id, emri, email);
-        this.kursetLigjero = new ArrayList<>();
+        this.kurset = new ArrayList<>();
     }
 
-    public void krijoKurs(Kursi kurs) {
-        this.kursetLigjero.add(kurs);
+    public void krijoKurs(Kursi kursi) {
+        kurset.add(kursi);
+        System.out.println("Kursi '" + kursi.getTitulli() + "' u krijua.");
     }
 
-    public void caktoDetyra(Detyra detyra, Kursi kurs) {
-        kurs.shtoDetyre(detyra);
-    }
-
-    @Override
-    public void shikoProfilin() {
-        System.out.println("Profili i Instruktori: " + getEmri());
-        System.out.println("Kurset e ligjëruara: " + kursetLigjero.size());
+    public void caktoDetyre(Kursi kursi, Detyra detyre) {
+        kursi.shtoDetyre(detyre);
+        System.out.println("Detyra' " + detyre.getTitulli() + "' u caktua.");
     }
 }

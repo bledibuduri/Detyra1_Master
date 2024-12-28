@@ -1,19 +1,19 @@
 package Platforma;
-import java.util.ArrayList;
-import java.util.List;
-// Klasa Postimi
+
+// Klasa për postimet
 class Postimi {
-    private String id;
-    private Perdorues perdoruesi;
+    private int id;
+    private Perdoruesi autor;
     private String permbajtja;
 
-    public Postimi(String id, Perdorues perdoruesi, String permbajtja) {
+    public Postimi(int id, Perdoruesi autor, String permbajtja) {
         this.id = id;
-        this.perdoruesi = perdoruesi;
+        this.autor = autor;
         this.permbajtja = permbajtja;
     }
 
     public void editoPermbajtjen(String permbajtja) {
         this.permbajtja = permbajtja;
+        System.out.println("Përmbajtja u përditësua.");
     }
 }
